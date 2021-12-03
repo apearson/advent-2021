@@ -2,9 +2,12 @@
   "name": "advent-2021",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/day1.ts",
   "scripts": {
-    "start": "ts-node ./src/day2.ts"
+    "start": "ts-node ./src/day3.ts",
+    "java": "java run thing1",
+    "js": "java run thing1",
+    "run:all": "npm run java & npm run js"
   },
   "author": "",
   "license": "ISC",

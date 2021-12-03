@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 
 async function part1() {
+  console.time("part1");
   const fileData = await fs.readFile("./data/data2.txt");
 
   const data = fileData
@@ -24,11 +25,14 @@ async function part1() {
       : console.log("I don't know what I'm doing");
   });
 
+  console.timeEnd("part1");
   console.log("Hor Pos", horPos);
   console.log("Vert Pos", vertPos);
+  console.log("Final Answer", horPos * vertPos);
 }
 
 async function part2() {
+  console.time("part2");
   const fileData = await fs.readFile("./data/data2.txt");
 
   const data = fileData
@@ -56,9 +60,16 @@ async function part2() {
     }
   });
 
+  console.timeEnd("part2");
+
   console.log("Hor Pos", horPos);
   console.log("Vert Pos", vertPos);
   console.log("Final Answer", horPos * vertPos);
 }
 
-part2();
+async function main() {
+  await part1();
+  await part2();
+}
+
+main();
